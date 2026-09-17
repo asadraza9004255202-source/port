@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Asad — Software Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="scrollBar"></div>
+<div class="spotlight" id="spotlight"></div>
+
+<header>
+  <div class="nav">
+    <a href="#home" class="brand">ASAD<span>.DEV</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
+    <nav class="links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#footer">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section id="home" class="hero">
+  <video class="hero-bg-video" autoplay muted loop playsinline>
+    <source src="intro-video.mp4" type="video/mp4">
+  </video>
+  <div class="hero-bg-overlay"></div>
+  <div class="wrap">
+    <div>
+      <div class="kicker">AVAILABLE FOR NEW WORK · BASED IN MUMBAI, IN</div>
+      <h1 class="title">Building software that holds up <em>under load.</em></h1>
+      <p class="lede">I'm Asad, a full-stack engineer who spends most of his time in backend systems, real-time data and clean interfaces — turning rough ideas into products people can rely on.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn primary">View my work</a>
+        <a href="#footer" class="btn ghost">Get in touch</a>
+      </div>
+    </div>
+    <div class="video-card framed">
+      <span class="tag">INTRO</span>
+      <video id="introVideo" autoplay muted loop playsinline>
+        <source src="intro-video.mp4" type="video/mp4">
+      </video>
+      <button class="sound-btn" id="soundBtn" aria-label="Toggle sound">🔇</button>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="sec-title">About</h2>
+      <span class="sec-index">01 / 04</span>
+    </div>
+    <div class="about-grid">
+      <div>
+        <div class="avatar-card" id="avatarCard">
+          <img src="asad-photo.png" alt="Asad">
+          <div class="bubble" id="avatarBubble">Hello Asad, kaise ho? 👋</div>
+          <div class="hint">CLICK TO SAY HI</div>
+        </div>
+        <p>I got into engineering by breaking a college project two nights before a demo, and staying up to actually understand why — rather than just patching it. That habit stuck.</p>
+        <p>Today I work across the stack, but I care most about the parts users never see: how a system behaves at 2am under real traffic, not just in a demo.</p>
+        <div class="stack-row">
+          <span class="chip">TypeScript</span>
+          <span class="chip">React</span>
+          <span class="chip">Node.js</span>
+          <span class="chip">PostgreSQL</span>
+          <span class="chip">Redis</span>
+          <span class="chip">Docker</span>
+          <span class="chip">AWS</span>
+          <span class="chip">WebSockets</span>
+        </div>
+      </div>
+      <div>
+        <div class="stat-line"><span class="k">Years building software</span><span class="v" data-count="3.5" data-suffix="">0</span></div>
+        <div class="stat-line"><span class="k">Production systems shipped</span><span class="v" data-count="11" data-suffix="">0</span></div>
+        <div class="stat-line"><span class="k">Peak concurrent users handled</span><span class="v" data-count="40000" data-suffix="+">0</span></div>
+        <div class="stat-line"><span class="k">Open-source contributions</span><span class="v" data-count="26" data-suffix=" PRs">0</span></div>
+        <div class="stat-line"><span class="k">Currently learning</span><span class="v">Rust, distributed consensus</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="sec-title">Selected projects</h2>
+      <span class="sec-index">02 / 04</span>
+    </div>
+
+    <div class="project featured framed">
+      <div class="project-top">
+        <div>
+          <span class="project-tag">FLAGSHIP BUILD</span>
+        </div>
+      </div>
+      <h3 class="project-title">Pulse — Real-Time Collaborative Data Engine</h3>
+      <p class="desc">A self-built alternative to Firebase's realtime layer: a WebSocket-based sync engine with operational-transform conflict resolution, letting hundreds of clients edit the same document simultaneously with sub-100ms propagation. Built the CRDT logic, the sharding layer, and the reconnection/replay protocol entirely from scratch.</p>
+      <div class="metrics">
+        <div class="metric"><span class="num" data-count="40000" data-suffix="k+" data-divide="1000">40k+</span><span class="lab">concurrent connections in load test</span></div>
+        <div class="metric"><span class="num" data-count="80" data-suffix="ms">0ms</span><span class="lab">avg sync latency</span></div>
+        <div class="metric"><span class="num" data-count="99.95" data-suffix="%">0%</span><span class="lab">uptime over 6 months</span></div>
+      </div>
+      <div class="project-links">
+        <a href="#">View source</a>
+        <a href="#">Live demo</a>
+        <a href="#">Read the write-up</a>
+      </div>
+    </div>
+
+    <div class="proj-simple-grid">
+      <div class="project">
+        <h3 class="project-title">Ledgerline</h3>
+        <p class="desc">A double-entry accounting API for small businesses, with automated reconciliation and exportable audit trails.</p>
+        <div class="project-links"><a href="#">Source</a><a href="#">Demo</a></div>
+      </div>
+      <div class="project">
+        <h3 class="project-title">Routewise</h3>
+        <p class="desc">A logistics route optimizer using a custom genetic algorithm, cutting delivery distance by 18% in simulation.</p>
+        <div class="project-links"><a href="#">Source</a><a href="#">Demo</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="sec-title">Education</h2>
+      <span class="sec-index">03 / 04</span>
+    </div>
+    <div class="timeline">
+      <div class="tl-item" data-n="1">
+        <div class="tl-year">2019 — 2023</div>
+        <div class="tl-title">B.Tech, Computer Science</div>
+        <div class="tl-place">Veermata Jijabai Technological Institute, Mumbai</div>
+      </div>
+      <div class="tl-item" data-n="2">
+        <div class="tl-year">2023</div>
+        <div class="tl-title">Distributed Systems Specialization</div>
+        <div class="tl-place">Self-directed coursework + production practice</div>
+      </div>
+      <div class="tl-item" data-n="3">
+        <div class="tl-year">2023 — Present</div>
+        <div class="tl-title">Full-Stack Engineer</div>
+        <div class="tl-place">Building Pulse and freelance client systems</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <p class="foot-cta-title">Have something worth building? Let's talk.</p>
+        <a href="#" class="btn primary">Download résumé</a>
+      </div>
+      <div>
+        <h4>CONTACT</h4>
+        <a class="contact-link" href="mailto:asad@email.com">asad@email.com</a>
+        <a class="contact-link" href="tel:+910000000000">+91 00000 00000</a>
+      </div>
+      <div>
+        <h4>ELSEWHERE</h4>
+        <a class="contact-link" href="#">GitHub</a>
+        <a class="contact-link" href="#">LinkedIn</a>
+        <a class="contact-link" href="#">Twitter / X</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Asad. Built from scratch — no template.</span>
+      <div class="socials">
+        <a href="#home">Back to top ↑</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
