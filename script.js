@@ -5,7 +5,7 @@
       avatarCard.classList.add('speaking');
       if('speechSynthesis' in window){
         window.speechSynthesis.cancel();
-        const utter = new SpeechSynthesisUtterance('Hello Asad, kaise ho?');
+        const utter = new SpeechSynthesisUtterance('Hello Hamza kaise ho, our sab kaisa chal raha hai?');
         utter.lang = 'hi-IN';
         utter.rate = 1;
         utter.onend = () => avatarCard.classList.remove('speaking');
